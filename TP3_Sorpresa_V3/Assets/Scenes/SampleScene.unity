@@ -685,6 +685,7 @@ GameObject:
   - component: {fileID: 467476048}
   - component: {fileID: 467476047}
   - component: {fileID: 467476046}
+  - component: {fileID: 467476050}
   m_Layer: 2
   m_Name: Multiplicasion
   m_TagString: Untagged
@@ -789,6 +790,19 @@ Transform:
   - {fileID: 638024262}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &467476050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467476045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d60cfeffe06a845b72c444abc3ba9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Multiplicasion
+  referencia: _Color_Base
 --- !u!1 &469056222
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,14 +908,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469056222}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 23, y: 0, z: -8}
   m_LocalScale: {x: 14, y: 1, z: 16}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1484623148}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &638024261
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,6 +959,7 @@ GameObject:
   - component: {fileID: 754048035}
   - component: {fileID: 754048034}
   - component: {fileID: 754048033}
+  - component: {fileID: 754048037}
   m_Layer: 2
   m_Name: Igual
   m_TagString: Untagged
@@ -1046,6 +1061,22 @@ Transform:
   - {fileID: 1771525786}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &754048037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754048032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c9a141f50489146ac4245f3e9e1c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Igual
+  referencia: _Color_Base
+  suma: {fileID: 1412452255}
+  resta: {fileID: 813373370}
+  multiplicasion: {fileID: 467476047}
 --- !u!1 &813373368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,6 +1089,7 @@ GameObject:
   - component: {fileID: 813373371}
   - component: {fileID: 813373370}
   - component: {fileID: 813373369}
+  - component: {fileID: 813373373}
   m_Layer: 2
   m_Name: Resta
   m_TagString: Untagged
@@ -1162,6 +1194,19 @@ Transform:
   - {fileID: 1358855358}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &813373373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813373368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131919e76c683854ca994cd0582ada8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Resta
+  referencia: _Color_Base
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,6 +1586,7 @@ GameObject:
   - component: {fileID: 1412452256}
   - component: {fileID: 1412452255}
   - component: {fileID: 1412452254}
+  - component: {fileID: 1412452258}
   m_Layer: 2
   m_Name: Suma
   m_TagString: Untagged
@@ -1645,6 +1691,19 @@ Transform:
   - {fileID: 1943782751}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1412452258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412452253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead3c4ae4c2f5dc48a6c1c1e3e0b5b8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sumar
+  referencia: _Color_Base
 --- !u!1 &1448034821
 GameObject:
   m_ObjectHideFlags: 0

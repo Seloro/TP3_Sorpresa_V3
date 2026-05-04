@@ -9,7 +9,7 @@ public class Control_Cubos : MonoBehaviour
     bool arrastrando;
     Vector3 posicionObjetivo;
     Renderer rend;
-    Color colorInicial;
+    Color32 colorInicial;
 
     private void Start()
     {
@@ -65,11 +65,11 @@ public class Control_Cubos : MonoBehaviour
 
     Color GenerarColorMultiplo25()
     {
-        int r = Random.Range(1, 11) * 25;
-        int g = Random.Range(1, 11) * 25;
-        int b = Random.Range(1, 11) * 25;
+        int r = Random.Range(0, 11) * 25;
+        int g = Random.Range(0, 11) * 25;
+        int b = Random.Range(0, 11) * 25;
 
-        return new Color(r / 255f, g / 255f, b / 255f, 1f);
+        return new Color32 (((byte)r), ((byte)g), ((byte)b), 255);
     }
 
     public Transform PrimerHijoSinNietos(Transform objeto)
