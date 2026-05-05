@@ -15,8 +15,7 @@ public class Control_Cubos : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
 
-        colorInicial = GenerarColorMultiplo25();
-        rend.material.SetColor("_Color_Base", colorInicial);
+        colorInicial = rend.material.GetColor("_Color_Base");
     }
 
     void Update()
@@ -44,6 +43,9 @@ public class Control_Cubos : MonoBehaviour
             if (Physics.Raycast(rayo, out impacto, Mathf.Infinity, capa))
                 if (PrimerHijoSinNietos(impacto.transform) != null)
                     gameObject.transform.SetParent(PrimerHijoSinNietos(impacto.transform));
+
+            if (impacto.transform.gameObject.name == "Reinicio")
+                rend.material.SetColor("_Color_Base", colorInicial);
         }
 
 
@@ -63,15 +65,6 @@ public class Control_Cubos : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, transform.parent.position, Time.deltaTime * velocidad * 2);
     }
 
-    Color GenerarColorMultiplo25()
-    {
-        int r = Random.Range(0, 11) * 25;
-        int g = Random.Range(0, 11) * 25;
-        int b = Random.Range(0, 11) * 25;
-
-        return new Color32 (((byte)r), ((byte)g), ((byte)b), 255);
-    }
-
     public Transform PrimerHijoSinNietos(Transform objeto)
     {
         if (objeto.childCount > 0)
@@ -87,5 +80,4 @@ public class Control_Cubos : MonoBehaviour
 
         return null;
     }
-
 }
